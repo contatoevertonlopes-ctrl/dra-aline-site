@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Aline Netto | Nutricionista Esportiva – Atendimento Presencial e Online</title>
+  <meta name="description" content="Dra. Aline Netto, nutricionista esportiva de alto padrão com atendimento presencial e online. Plano alimentar personalizado, sem radicalismos, com acompanhamento humanizado e resultados reais." />
+  <meta name="keywords" content="nutricionista esportiva, nutricionista online, Aline Netto, plano alimentar, nutrição esportiva, reeducação alimentar, nutricionista presencial, nutricionista alto padrão" />
+  <meta name="author" content="Dra. Aline Netto" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.draaline.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dra. Aline Netto | Nutricionista Esportiva" />
+  <meta property="og:description" content="Nutrição esportiva de alto padrão. Atendimento presencial e online com plano alimentar 100% personalizado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.draaline.com.br/" />
+  <meta property="og:image" content="https://www.draaline.com.br/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dra. Aline Netto | Nutricionista Esportiva" />
+  <meta name="twitter:description" content="Nutrição esportiva de alto padrão. Atendimento humanizado, plano personalizado, resultados reais." />
+
+  <!-- Schema Markup JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dra. Aline Netto – Nutricionista Esportiva",
+    "description": "Nutricionista esportiva especializada em planos alimentares personalizados, atendimento presencial e online, reeducação alimentar e nutrição de alto desempenho.",
+    "medicalSpecialty": "Nutrição Esportiva",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "telephone": "+55-11-99999-9999",
+    "url": "https://www.draaline.com.br",
+    "sameAs": ["https://www.instagram.com/draalineenetto"],
+    "employee": {
+      "@type": "Person",
+      "name": "Dra. Aline Netto",
+      "jobTitle": "Nutricionista Esportiva",
+      "description": "Nutricionista com foco em nutrição esportiva, reeducação alimentar e acompanhamento humanizado.",
+      "alumniOf": "Curso de Nutrição"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "10",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    /* ─── Reset & CSS Variables ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #FAF7F2;
+      --gold:       #C9A05A;
+      --gold-light: #E8C97C;
+      --gold-dark:  #9A7340;
+      --charcoal:   #1C1A17;
+      --text:       #3A3530;
+      --text-muted: #7A7068;
+      --white:      #FFFFFF;
+      --surface:    #F5F0E8;
+      --border:     rgba(201,160,90,0.25);
+
+      --font-head: 'Lora', Georgia, serif;
+      --font-body: 'Raleway', system-ui, sans-serif;
+
+      --radius-sm:  8px;
+      --radius-md:  16px;
+      --radius-lg:  32px;
+      --radius-xl:  64px;
+
+      --shadow-soft: 0 4px 32px rgba(28,26,23,0.08);
+      --shadow-gold: 0 8px 40px rgba(201,160,90,0.20);
+      --shadow-deep: 0 24px 80px rgba(28,26,23,0.16);
+
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── Reduced Motion ─────────────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* ─── Utilities ──────────────────────────────────────────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+    /* ─── Gradient Text ──────────────────────────────────────────────── */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ─── Button ─────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: all 280ms var(--ease-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: rgba(255,255,255,0);
+      transition: background 280ms;
+    }
+    .btn:hover::after { background: rgba(255,255,255,0.12); }
+    .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 60%, var(--gold-light) 100%);
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(201,160,90,0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 44px rgba(201,160,90,0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: rgba(201,160,90,0.08);
+      color: var(--gold-dark);
+      border: 1.5px solid var(--border);
+    }
+    .btn-ghost:hover {
+      background: rgba(201,160,90,0.16);
+      transform: translateY(-2px);
+    }
+
+    /* ─── Section label ──────────────────────────────────────────────── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      width: 28px;
+      height: 1.5px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    /* ─── NAVBAR ─────────────────────────────────────────────────────── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all 380ms var(--ease-smooth);
+    }
+    .navbar.scrolled {
+      background: rgba(250,247,242,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 12px 0;
+      box-shadow: 0 2px 24px rgba(28,26,23,0.08);
+    }
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 220ms;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0; right: 0;
+      height: 1.5px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 260ms var(--ease-smooth);
+    }
+    .nav-links a:hover { color: var(--gold-dark); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 280ms; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-cta .btn-outline { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      /* overflow: visible so floating badges aren't clipped */
+      overflow: visible;
+      padding-top: 100px;
+    }
+    /* Blobs & canvas get their OWN clip layer — hero itself stays open */
+    .hero-bg-clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* 3D background canvas */
+    #hero-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* Decorative blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.18;
+      animation: blobPulse 8s ease-in-out infinite;
+    }
+    .blob-1 { width: 500px; height: 500px; background: var(--gold); top: -120px; right: -80px; animation-delay: 0s; }
+    .blob-2 { width: 350px; height: 350px; background: var(--gold-light); bottom: 0; left: -100px; animation-delay: 3s; }
+    .blob-3 { width: 200px; height: 200px; background: var(--gold-dark); top: 40%; left: 40%; animation-delay: 5s; }
+
+    @keyframes blobPulse {
+      0%, 100% { transform: scale(1) translate(0, 0); }
+      33% { transform: scale(1.08) translate(20px, -20px); }
+      66% { transform: scale(0.94) translate(-15px, 15px); }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .hero-content { max-width: 560px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,160,90,0.1);
+      border: 1.5px solid rgba(201,160,90,0.3);
+      border-radius: 100px;
+      padding: 6px 16px 6px 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      letter-spacing: 0.05em;
+      margin-bottom: 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge .badge-dot {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+    @keyframes dotPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.72;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 460px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      padding-top: 24px;
+      border-top: 1.5px solid var(--border);
+    }
+    .stat { display: flex; flex-direction: column; }
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .stat-num span { color: var(--gold); }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-top: 4px;
+    }
+
+    /* Hero image 3D card */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      /* Extra padding so badges outside card bounds stay visible */
+      padding: 50px 60px 50px 20px;
+      overflow: visible;
+    }
+
+    .hero-card {
+      position: relative;
+      width: 380px;
+      max-width: 100%;
+      /* 3D managed entirely by JS to avoid transform conflicts */
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-deep), 0 0 0 1px rgba(201,160,90,0.15);
+      /* NO initial CSS transform — GSAP owns this */
+      will-change: transform;
+      transition: box-shadow 400ms var(--ease-smooth);
+    }
+    .hero-img-wrap:hover {
+      box-shadow: 0 40px 100px rgba(28,26,23,0.22), 0 0 0 1px rgba(201,160,90,0.25);
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      display: block;
+      /* Subtle scale on hover via parent */
+      transition: transform 600ms var(--ease-smooth);
+    }
+    .hero-img-wrap:hover img { transform: scale(1.03); }
+
+    /* Gold shimmer overlay */
+    .hero-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(201,160,90,0.0) 0%,
+        rgba(201,160,90,0.07) 50%,
+        rgba(201,160,90,0.0) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Floating card badges */
+    .float-badge {
+      position: absolute;
+      background: rgba(250,247,242,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(201,160,90,0.22);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      box-shadow: var(--shadow-gold);
+      /* Float animation uses translateY only — no conflict with 3D tilt */
+      animation: floatY 4s ease-in-out infinite;
+      /* opacity controlled entirely by GSAP — no CSS conflict */
+    }
+    .float-badge:nth-child(2) { animation-delay: 1.5s; }
+    .float-badge:nth-child(3) { animation-delay: 3s; }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    /* Positioned relative to .hero-card — inside padding zone */
+    .badge-stars  { position: absolute; top: -36px;  left: -10px; }
+    .badge-online { position: absolute; bottom: 80px; right: -52px; min-width: 150px; }
+    .badge-app    { position: absolute; bottom: -36px; left: 24px; }
+
+    .float-badge .fb-icon {
+      font-size: 1.3rem;
+      margin-bottom: 2px;
+    }
+    .float-badge .fb-val {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .float-badge .fb-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .hero-content { max-width: 100%; }
+    }
+
+    /* ─── TRUST BAR ──────────────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--charcoal);
+      padding: 20px 0;
+      overflow: hidden;
+    }
+    .trust-track {
+      display: flex;
+      gap: 64px;
+      animation: scrollTrack 20s linear infinite;
+      width: max-content;
+    }
+    @keyframes scrollTrack {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .trust-item svg { color: var(--gold); opacity: 0.9; flex-shrink: 0; }
+    .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); opacity: 0.5; }
+
+    /* ─── SERVICES ───────────────────────────────────────────────────── */
+    .services {
+      padding: 120px 0 100px;
+    }
+    .services-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 72px;
+    }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.72;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      border: 1.5px solid rgba(201,160,90,0.12);
+      box-shadow: var(--shadow-soft);
+      transition: all 360ms var(--ease-smooth);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+      opacity: 0;
+      transition: opacity 360ms;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-gold), var(--shadow-deep);
+      border-color: rgba(201,160,90,0.3);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .sc-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(201,160,90,0.12), rgba(201,160,90,0.06));
+      border: 1.5px solid rgba(201,160,90,0.2);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--gold);
+      transition: all 360ms var(--ease-spring);
+    }
+    .service-card:hover .sc-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: white;
+      transform: scale(1.1) rotate(5deg);
+    }
+    .sc-title {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .sc-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .sc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      background: rgba(201,160,90,0.08);
+      border-radius: 100px;
+      padding: 4px 12px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── ABOUT ──────────────────────────────────────────────────────── */
+    .about {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--surface) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; }
+      .about-visual { order: -1; }
+    }
+
+    .about-visual { position: relative; }
+    .about-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-deep);
+      position: relative;
+    }
+    .about-img img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms var(--ease-smooth);
+    }
+    .about-img:hover img { transform: scale(1.03); }
+
+    /* Gold frame decoration */
+    .about-img::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: calc(var(--radius-lg) + 12px);
+      background: linear-gradient(135deg, var(--gold), transparent 60%, var(--gold-light));
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    /* Credential badge */
+    .cred-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--charcoal);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      color: white;
+      box-shadow: var(--shadow-deep);
+      min-width: 180px;
+    }
+    .cred-badge .cred-val {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .cred-badge .cred-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+
+    .about-text .section-title { margin-bottom: 20px; }
+
+    .about-para {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      line-height: 1.82;
+      margin-bottom: 16px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 32px 0;
+    }
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .pillar-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ─── PROCESS ────────────────────────────────────────────────────── */
+    .process {
+      padding: 100px 0;
+    }
+    .process-header {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 72px;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold), transparent);
+      opacity: 0.3;
+    }
+    @media (max-width: 900px) {
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 480px) { .process-steps { grid-template-columns: 1fr; } }
+
+    .step {
+      text-align: center;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 500ms var(--ease-smooth);
+    }
+    .step.visible { opacity: 1; transform: translateY(0); }
+
+    .step-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: white;
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 24px rgba(201,160,90,0.35);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-title {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .step-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.68;
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────────────────── */
+    .testimonials {
+      padding: 100px 0;
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(201,160,90,0.08) 0%, transparent 70%);
+    }
+    .test-header { text-align: center; margin-bottom: 64px; position: relative; z-index: 1; }
+    .test-header .section-label { color: var(--gold-light); }
+    .test-header .section-title { color: var(--white); }
+    .test-header .section-sub { color: rgba(255,255,255,0.55); }
+
+    /* Rating summary */
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      position: relative;
+      z-index: 1;
+    }
+    .rating-num {
+      font-family: var(--font-head);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .rating-info {}
+    .stars-row {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 4px;
+    }
+    .star { color: var(--gold); font-size: 1.1rem; }
+    .rating-count { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+    /* Testimonial cards */
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 900px) { .test-grid { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 900px) { .test-grid { grid-template-columns: 1fr 1fr; } }
+
+    .test-card {
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(201,160,90,0.15);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      backdrop-filter: blur(12px);
+      transition: all 360ms var(--ease-smooth);
+    }
+    .test-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(201,160,90,0.35);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .test-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .test-text {
+      font-size: 0.91rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.75;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .test-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    .test-name {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.9);
+    }
+    .test-platform { font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+
+    /* Highlighted card */
+    .test-card.featured {
+      border-color: rgba(201,160,90,0.4);
+      background: rgba(201,160,90,0.06);
+    }
+
+    /* ─── CTA SECTION ────────────────────────────────────────────────── */
+    .cta-section {
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 64px 60px;
+      box-shadow: var(--shadow-deep);
+      border: 1.5px solid rgba(201,160,90,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+      background-size: 200%;
+      animation: shimmerBg 3s linear infinite;
+    }
+    @keyframes shimmerBg {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .cta-card .section-label { justify-content: center; }
+    .cta-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+    .cta-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.72;
+    }
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+    .cta-perks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .perk {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .perk svg { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .cta-card { padding: 48px 28px; }
+      .cta-actions { flex-direction: column; align-items: center; }
+    }
+
+    /* Gold dots decoration */
+    .gold-dots {
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      opacity: 0.5;
+    }
+    .gold-dots.top-right { top: 0; right: 0; }
+    .gold-dots.bottom-left { bottom: 0; left: 0; transform: rotate(180deg); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--charcoal);
+      padding: 64px 0 32px;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; gap: 32px; } }
+
+    .footer-brand .nav-logo { color: white; font-size: 1.3rem; display: block; margin-bottom: 12px; }
+    .footer-tagline {
+      font-size: 0.85rem;
+      line-height: 1.72;
+      color: rgba(255,255,255,0.5);
+      max-width: 260px;
+      margin-bottom: 24px;
+    }
+    .social-links { display: flex; gap: 10px; }
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(201,160,90,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: all 260ms;
+    }
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .footer-col h4 {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 220ms;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.78rem;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ─── Scroll Reveal (JS) ─────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 600ms var(--ease-smooth), transform 600ms var(--ease-smooth);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left { opacity: 0; transform: translateX(-50px); transition: opacity 700ms var(--ease-smooth), transform 700ms var(--ease-smooth); }
+    .reveal-right { opacity: 0; transform: translateX(50px); transition: opacity 700ms var(--ease-smooth), transform 700ms var(--ease-smooth); }
+    .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ─── Stagger delays ─────────────────────────────────────────────── */
+    .d1 { transition-delay: 0ms; }
+    .d2 { transition-delay: 100ms; }
+    .d3 { transition-delay: 200ms; }
+    .d4 { transition-delay: 300ms; }
+
+    /* ─── WhatsApp Float ─────────────────────────────────────────────── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: all 280ms var(--ease-spring);
+      animation: whaFloat 4s ease-in-out infinite 2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-4px);
+      box-shadow: 0 16px 44px rgba(37,211,102,0.5);
+    }
+    @keyframes whaFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* ─── Particle canvas — inside .hero-bg-clip ────────────────────── */
+    #particles-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+      <div class="navbar-inner">
+        <a href="#home" class="nav-logo" aria-label="Dra. Aline Netto – Página inicial">
+          Dra. <span>Aline Netto</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="#contato" class="btn btn-outline" style="padding:10px 22px;font-size:0.84rem;">Saiba mais</a>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" style="padding:10px 22px;font-size:0.84rem;" target="_blank" rel="noopener noreferrer">
+            Agendar Consulta
+          </a>
+        </div>
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── HERO ────────────────────────────────────────────────────────── -->
+  <main>
+    <section class="hero" id="home" aria-label="Apresentação">
+      <!-- Clipping wrapper keeps blobs & canvas contained without clipping badge children -->
+      <div class="hero-bg-clip" aria-hidden="true">
+        <canvas id="particles-canvas"></canvas>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge" aria-label="Nutricionista Esportiva com atendimento online">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Nutricionista Esportiva · Online &amp; Presencial
+          </div>
+
+          <h1 class="hero-title">
+            Nutrição que <em>transforma</em> seu desempenho e sua vida
+          </h1>
+
+          <p class="hero-sub">
+            Plano alimentar 100% personalizado, sem radicalismos. Acompanhamento humanizado da Dra. Aline Netto para você alcançar seus objetivos com saúde, prazer e consistência.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Agendar Consulta
+            </a>
+            <a href="#sobre" class="btn btn-ghost">Conhecer mais</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Números da Dra. Aline Netto">
+            <div class="stat">
+              <span class="stat-num">5<span>★</span></span>
+              <span class="stat-label">Google Reviews</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">+<span>500</span></span>
+              <span class="stat-label">Pacientes atendidos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3<span>+</span></span>
+              <span class="stat-label">Anos de experiência</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-img-wrap">
+              <img
+                src="ATENDIMENTO ALINE NETTO - PRESENCIAL E ON-LINE_files/6ae6124ab006e5d77df97b6dd7910599.jpg"
+                alt="Dra. Aline Netto, nutricionista esportiva"
+                width="400" height="580"
+                loading="eager"
+              />
+            </div>
+
+            <!-- Floating badges -->
+            <div class="float-badge badge-stars">
+              <div class="stars-row" aria-label="5 estrelas">
+                <span class="star" aria-hidden="true">★</span>
+                <span class="star" aria-hidden="true">★</span>
+                <span class="star" aria-hidden="true">★</span>
+                <span class="star" aria-hidden="true">★</span>
+                <span class="star" aria-hidden="true">★</span>
+              </div>
+              <div class="fb-val">5.0</div>
+              <div class="fb-label">Google Reviews</div>
+            </div>
+
+            <div class="float-badge badge-online">
+              <div class="fb-icon">💻</div>
+              <div class="fb-val">Online</div>
+              <div class="fb-label">Atendimento remoto</div>
+            </div>
+
+            <div class="float-badge badge-app">
+              <div class="fb-icon">📱</div>
+              <div class="fb-val">App exclusivo</div>
+              <div class="fb-label">Acompanhamento diário</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRUST BAR ─────────────────────────────────────────────────── -->
+    <div class="trust-bar" aria-hidden="true">
+      <div class="trust-track">
+        <!-- Duplicate for infinite loop -->
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Plano 100% Personalizado
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Sem Dietas Radicais
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Atendimento Presencial e Online
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          App de Acompanhamento
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Nutrição Esportiva de Alto Padrão
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Reeducação Alimentar Duradoura
+        </div>
+        <span class="trust-dot"></span>
+        <!-- Duplicate set -->
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Plano 100% Personalizado
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Sem Dietas Radicais
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Atendimento Presencial e Online
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          App de Acompanhamento
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Nutrição Esportiva de Alto Padrão
+        </div>
+        <span class="trust-dot"></span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          Reeducação Alimentar Duradoura
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SERVICES ──────────────────────────────────────────────────── -->
+    <section class="services" id="servicos" aria-label="Serviços">
+      <div class="container">
+        <div class="services-header reveal">
+          <span class="section-label">O que ofereço</span>
+          <h2 class="section-title">Serviços desenvolvidos para <span class="gradient-text">seus objetivos</span></h2>
+          <p class="section-sub">Cada atendimento é único. Crio estratégias alimentares personalizadas que se adaptam à sua rotina, seu metabolismo e seus objetivos esportivos.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal d1" aria-label="Consulta presencial">
+            <div class="sc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="sc-title">Consulta Presencial</h3>
+            <p class="sc-desc">Atendimento no consultório com ambiente acolhedor e sofisticado. Avaliação completa com bioimpedância, anamnese detalhada e plano alimentar entregue no mesmo dia.</p>
+            <span class="sc-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Consultório próprio
+            </span>
+          </article>
+
+          <article class="service-card reveal d2" aria-label="Consulta online">
+            <div class="sc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="sc-title">Consulta Online</h3>
+            <p class="sc-desc">Atendimento remoto com a mesma qualidade e atenção da consulta presencial. Perfeito para quem não pode se deslocar. Plataforma segura e fácil de usar.</p>
+            <span class="sc-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+              Para todo o Brasil
+            </span>
+          </article>
+
+          <article class="service-card reveal d3" aria-label="Nutrição Esportiva">
+            <div class="sc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="sc-title">Nutrição Esportiva</h3>
+            <p class="sc-desc">Estratégia nutricional para melhorar desempenho, recuperação muscular e composição corporal. Periodização alimentar integrada ao seu treino.</p>
+            <span class="sc-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+              Alto desempenho
+            </span>
+          </article>
+
+          <article class="service-card reveal d1" aria-label="Reeducação Alimentar">
+            <div class="sc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="sc-title">Reeducação Alimentar</h3>
+            <p class="sc-desc">Sem dietas malucas ou restrições extremas. Aprendo com você um novo relacionamento com a comida, criando hábitos sustentáveis que duram a vida toda.</p>
+            <span class="sc-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Resultados duradouros
+            </span>
+          </article>
+
+          <article class="service-card reveal d2" aria-label="App de Acompanhamento">
+            <div class="sc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 class="sc-title">App de Acompanhamento</h3>
+            <p class="sc-desc">Plataforma exclusiva para acompanhar seu plano alimentar, registrar refeições, tirar dúvidas e monitorar sua evolução em tempo real.</p>
+            <span class="sc-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+              Suporte contínuo
+            </span>
+          </article>
+
+          <article class="service-card reveal d3" aria-label="Plano Alimentar Personalizado">
+            <div class="sc-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="sc-title">Plano Alimentar Completo</h3>
+            <p class="sc-desc">Cardápio detalhado com substituições, orientações práticas e adaptado aos seus gostos. Montado com base nos seus objetivos, rotina e preferências.</p>
+            <span class="sc-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              100% personalizado
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────────── -->
+    <section class="about" id="sobre" aria-label="Sobre a Dra. Aline Netto">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-visual reveal-left">
+            <div class="about-img">
+              <img
+                src="ATENDIMENTO ALINE NETTO - PRESENCIAL E ON-LINE_files/a36da4a23acae26205a1f70708d91217.jpg"
+                alt="Dra. Aline Netto, nutricionista esportiva especializada em plano alimentar personalizado"
+                width="500" height="600"
+                loading="lazy"
+              />
+            </div>
+            <div class="cred-badge" aria-label="Mais de 3 anos de prática clínica">
+              <div class="cred-val">+3</div>
+              <div class="cred-label">anos de prática clínica</div>
+            </div>
+          </div>
+
+          <div class="about-text reveal-right">
+            <span class="section-label">Quem sou eu</span>
+            <h2 class="section-title">
+              Nutrição com ciência, <span class="gradient-text">cuidado e humanidade</span>
+            </h2>
+
+            <p class="about-para">
+              Sou a <strong>Dra. Aline Netto</strong>, nutricionista especializada em nutrição esportiva e reeducação alimentar. Acredito que uma alimentação saudável deve ser prazerosa, sustentável e adaptada à realidade de cada pessoa.
+            </p>
+            <p class="about-para">
+              Minha abordagem é baseada na escuta ativa: entendo seu histórico, seus objetivos e sua rotina antes de criar qualquer estratégia. Sem radicalismos, sem dietas prontas. Cada plano é construído do zero, pensado exclusivamente para você.
+            </p>
+            <p class="about-para">
+              Atendo presencialmente em consultório próprio — acolhedor e de fácil acesso — e também de forma online para todo o Brasil.
+            </p>
+
+            <div class="pillars" aria-label="Pilares do atendimento">
+              <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Plano sem radicalismos</div>
+              <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Escuta ativa e humanizada</div>
+              <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Nutrição esportiva especializada</div>
+              <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Acompanhamento contínuo</div>
+              <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>App de suporte exclusivo</div>
+              <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Resultados sustentáveis</div>
+            </div>
+
+            <a href="https://wa.me/5511999999999?text=Olá%20Dra.%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seus%20atendimentos." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Falar com a Dra. Aline
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESS ───────────────────────────────────────────────────── -->
+    <section class="process" id="metodo" aria-label="Método de atendimento">
+      <div class="container">
+        <div class="process-header reveal">
+          <span class="section-label">Como funciona</span>
+          <h2 class="section-title">Seu caminho para uma <span class="gradient-text">alimentação transformadora</span></h2>
+          <p class="section-sub">Um processo simples, personalizado e com suporte em cada etapa.</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="step d1">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3 class="step-title">Primeiro contato</h3>
+            <p class="step-desc">Agende pelo WhatsApp ou pelo site. Responderei rapidamente para confirmar sua consulta.</p>
+          </div>
+          <div class="step d2">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3 class="step-title">Anamnese completa</h3>
+            <p class="step-desc">Conversa aprofundada sobre seu histórico, rotina, objetivos, preferências e estilo de vida.</p>
+          </div>
+          <div class="step d3">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3 class="step-title">Plano personalizado</h3>
+            <p class="step-desc">Criação do seu plano alimentar exclusivo, com cardápio detalhado e todas as substituições.</p>
+          </div>
+          <div class="step d4">
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3 class="step-title">Acompanhamento</h3>
+            <p class="step-desc">Suporte contínuo via app, retornos periódicos e ajustes ao longo da sua jornada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ──────────────────────────────────────────────── -->
+    <section class="testimonials" id="depoimentos" aria-label="Depoimentos de pacientes">
+      <div class="container">
+        <div class="test-header">
+          <span class="section-label">Depoimentos</span>
+          <h2 class="section-title">O que dizem meus pacientes</h2>
+          <p class="section-sub">Avaliações reais do Google de quem já transformou sua alimentação.</p>
+        </div>
+
+        <div class="rating-summary" aria-label="Média de avaliações: 5 estrelas">
+          <span class="rating-num">5.0</span>
+          <div class="rating-info">
+            <div class="stars-row" aria-hidden="true">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="rating-count">Baseado em avaliações do Google</div>
+          </div>
+        </div>
+
+        <div class="test-grid">
+          <div class="test-card featured reveal d1">
+            <div class="test-stars" aria-label="5 estrelas"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="test-text">"Minha experiência é maravilhosa! Aline possui atendimento diferenciado de todos os profissionais que já passei. Além de todo processo técnico da profissão, é extremamente atenciosa e cuidadosa com o paciente. Continuo no meu processo de reeducação, e já estamos no terceiro ano juntas."</p>
+            <div class="test-author">
+              <div class="test-avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="test-name">Anna Caroline Augustinho</div>
+                <div class="test-platform">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-card reveal d2">
+            <div class="test-stars" aria-label="5 estrelas"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="test-text">"Dra Aline é super atenciosa, escuta tudo e o plano alimentar é sempre de acordo com suas necessidades, adoro! O que mais gosto é que não tem radicalismo na dieta e ela sempre explica tudo nos mínimos detalhes. Melhor nutri, sempre indico!"</p>
+            <div class="test-author">
+              <div class="test-avatar" aria-hidden="true">D</div>
+              <div>
+                <div class="test-name">Daiana Ximenes Nagamatsu</div>
+                <div class="test-platform">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-card reveal d3">
+            <div class="test-stars" aria-label="5 estrelas"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="test-text">"Ótima nutricionista, super atenciosa, tem um olhar super carinhoso às nossas necessidades, com isso monta o plano alimentar de acordo com o que gostamos. Simplesmente maravilhosa profissional, ela segura em nossas mãos e caminha junto."</p>
+            <div class="test-author">
+              <div class="test-avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="test-name">Marcia Queiroz</div>
+                <div class="test-platform">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-card reveal d1">
+            <div class="test-stars" aria-label="5 estrelas"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="test-text">"Gostei muito do atendimento. Dra Aline ficou atenta às minhas necessidades, me atendeu de forma humana. Fez um plano alimentar completo e ainda tem um aplicativo super funcional."</p>
+            <div class="test-author">
+              <div class="test-avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="test-name">Adriane Di Pace</div>
+                <div class="test-platform">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-card reveal d2">
+            <div class="test-stars" aria-label="5 estrelas"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="test-text">"Excelente profissional, gostei muito do trabalho. Já tinha passado por outras profissionais e nunca consegui seguir o plano alimentar, mas dessa vez foi diferente. Indico o trabalho da Drª Aline para todos."</p>
+            <div class="test-author">
+              <div class="test-avatar" aria-hidden="true">O</div>
+              <div>
+                <div class="test-name">Osvaldo Henrique</div>
+                <div class="test-platform">Google Reviews · Local Guide</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-card reveal d3">
+            <div class="test-stars" aria-label="5 estrelas"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="test-text">"O espaço é muito bonito e acolhedor. Fui bem atendida e a Aline é uma ótima profissional. Ouviu tudo o que eu tinha para dizer e fez uma consulta bem completa. Recomendo."</p>
+            <div class="test-author">
+              <div class="test-avatar" aria-hidden="true">H</div>
+              <div>
+                <div class="test-name">Hanna Carolina Lins</div>
+                <div class="test-platform">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA SECTION ───────────────────────────────────────────────── -->
+    <section class="cta-section" id="contato" aria-label="Agendar consulta">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-card">
+            <svg class="gold-dots top-right" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
+              <defs><radialGradient id="gd1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C9A05A" stop-opacity="0.6"/><stop offset="100%" stop-color="#C9A05A" stop-opacity="0"/></radialGradient></defs>
+              <g fill="#C9A05A">
+                <circle cx="10" cy="10" r="2" opacity="0.4"/><circle cx="40" cy="8" r="1.5" opacity="0.3"/><circle cx="70" cy="15" r="2" opacity="0.5"/>
+                <circle cx="25" cy="35" r="1.5" opacity="0.3"/><circle cx="55" cy="32" r="2.5" opacity="0.4"/><circle cx="85" cy="28" r="1.5" opacity="0.6"/>
+                <circle cx="15" cy="60" r="2" opacity="0.3"/><circle cx="45" cy="55" r="1.5" opacity="0.5"/><circle cx="75" cy="50" r="2" opacity="0.4"/>
+                <circle cx="30" cy="80" r="1.5" opacity="0.4"/><circle cx="60" cy="75" r="2" opacity="0.3"/><circle cx="90" cy="70" r="1.5" opacity="0.5"/>
+              </g>
+            </svg>
+
+            <span class="section-label" style="justify-content:center;">Pronto para começar?</span>
+            <h2 class="cta-title">
+              Transforme sua relação com a alimentação <span class="gradient-text">hoje mesmo</span>
+            </h2>
+            <p class="cta-sub">
+              Agende sua consulta com a Dra. Aline Netto e dê o primeiro passo rumo a uma vida mais saudável, com energia e equilíbrio.
+            </p>
+
+            <div class="cta-actions">
+              <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Aline%20Netto." class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size:1rem;padding:18px 40px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Agendar pelo WhatsApp
+              </a>
+              <a href="https://www.instagram.com/draalineenetto" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                Ver no Instagram
+              </a>
+            </div>
+
+            <div class="cta-perks">
+              <span class="perk">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                Sem compromisso
+              </span>
+              <span class="perk">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                Resposta rápida
+              </span>
+              <span class="perk">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                Presencial ou online
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────── -->
+  <footer class="footer" aria-label="Rodapé">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">Dra. <span>Aline Netto</span></a>
+          <p class="footer-tagline">Nutricionista Esportiva especializada em planos alimentares personalizados. Atendimento presencial e online com humanidade e ciência.</p>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/draalineenetto" class="social-link" aria-label="Instagram da Dra. Aline Netto" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://wa.me/5511999999999" class="social-link" aria-label="WhatsApp da Dra. Aline Netto" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Consulta Presencial</a></li>
+            <li><a href="#servicos">Consulta Online</a></li>
+            <li><a href="#servicos">Nutrição Esportiva</a></li>
+            <li><a href="#servicos">Reeducação Alimentar</a></li>
+            <li><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">Agendar Consulta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Dra. Aline Netto – Nutricionista Esportiva. Todos os direitos reservados.</span>
+        <span>CRN · Nutricionista registrada</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp Float ─────────────────────────────────────────────── -->
+  <a
+    href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com Dra. Aline pelo WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- ── JS ────────────────────────────────────────────────────────── -->
+  <script>
+    // ── Navbar scroll ───────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 50);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // ── Intersection Observer – reveal animations ───────────────────
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .step');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── Staggered service cards ──────────────────────────────────────
+    const cards = document.querySelectorAll('.service-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(c => { c.classList.add('reveal'); cardObserver.observe(c); });
+
+    // ── GSAP Hero Entrance ──────────────────────────────────────────
+    if (typeof gsap !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ── Left column stagger ──────────────────────────────────────
+      gsap.from('.hero-badge',   { opacity: 0, y: 20, duration: 0.65, ease: 'power3.out', delay: 0.15 });
+      gsap.from('.hero-title',   { opacity: 0, y: 32, duration: 0.80, ease: 'power3.out', delay: 0.32 });
+      gsap.from('.hero-sub',     { opacity: 0, y: 22, duration: 0.70, ease: 'power3.out', delay: 0.50 });
+      gsap.from('.hero-actions', { opacity: 0, y: 20, duration: 0.65, ease: 'power3.out', delay: 0.65 });
+      gsap.from('.hero-stats',   { opacity: 0, y: 20, duration: 0.65, ease: 'power3.out', delay: 0.80 });
+
+      // ── Hero card: fade + slight rise only (no x-translate to avoid clipping) ──
+      gsap.from('.hero-card', {
+        opacity: 0,
+        y: 40,
+        duration: 1.0,
+        ease: 'power3.out',
+        delay: 0.4,
+        onComplete: () => {
+          // Apply initial 3D tilt AFTER entrance is done — no conflict
+          gsap.to('.hero-img-wrap', {
+            rotateY: -6,
+            rotateX: 2,
+            transformPerspective: 1200,
+            duration: 0.8,
+            ease: 'power2.out'
+          });
+        }
+      });
+
+      // ── Badges: reveal after card is in place ────────────────────
+      gsap.from('.badge-stars',  { opacity: 0, scale: 0.75, y: 10, duration: 0.55, ease: 'back.out(1.6)', delay: 1.25 });
+      gsap.from('.badge-online', { opacity: 0, scale: 0.75, x: 12, duration: 0.55, ease: 'back.out(1.6)', delay: 1.45 });
+      gsap.from('.badge-app',    { opacity: 0, scale: 0.75, y: -10, duration: 0.55, ease: 'back.out(1.6)', delay: 1.65,
+        onComplete: () => {
+          // Mark badges as visible so CSS opacity transition takes over
+          document.querySelectorAll('.float-badge').forEach(b => b.classList.add('visible'));
+        }
+      });
+
+      // ── Subtle parallax on scroll ────────────────────────────────
+      gsap.to('.hero-card', {
+        y: -50,
+        ease: 'none',
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.2 }
+      });
+    } else {
+      // Fallback: show everything if GSAP fails to load
+      document.querySelector('.hero-card').style.opacity = '1';
+      document.querySelectorAll('.float-badge').forEach(b => { b.style.opacity = '1'; });
+    }
+
+    // ── Particle canvas (floating gold particles) ────────────────────
+    (function() {
+      const canvas = document.getElementById('particles-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H, particles = [];
+      const NUM = 60;
+
+      function resize() {
+        W = canvas.width = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize, { passive: true });
+
+      const colors = ['rgba(201,160,90,', 'rgba(232,201,124,', 'rgba(154,115,64,'];
+
+      for (let i = 0; i < NUM; i++) {
+        particles.push({
+          x: Math.random() * (W || 1400),
+          y: Math.random() * (H || 900),
+          r: Math.random() * 2.5 + 0.5,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          alpha: Math.random() * 0.5 + 0.1,
+          color: colors[Math.floor(Math.random() * colors.length)]
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = W;
+          if (p.x > W) p.x = 0;
+          if (p.y < 0) p.y = H;
+          if (p.y > H) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color + p.alpha + ')';
+          ctx.fill();
+        });
+        requestAnimationFrame(draw);
+      }
+
+      // Only run if reduced motion is off
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        draw();
+      }
+    })();
+
+    // ── 3D tilt on hero card — GSAP-managed to prevent transform conflicts ──
+    (function() {
+      const wrap = document.querySelector('.hero-img-wrap');
+      const visual = document.querySelector('.hero-visual');
+      if (!wrap || !visual || typeof gsap === 'undefined') return;
+
+      // Wait until GSAP entrance is done (~1.5s) before enabling tilt
+      let tiltEnabled = false;
+      setTimeout(() => { tiltEnabled = true; }, 1600);
+
+      // GSAP quickTo for butter-smooth tilt at 60fps
+      const setRotY = gsap.quickTo(wrap, 'rotateY', { duration: 0.5, ease: 'power2.out' });
+      const setRotX = gsap.quickTo(wrap, 'rotateX', { duration: 0.5, ease: 'power2.out' });
+
+      visual.addEventListener('mousemove', (e) => {
+        if (!tiltEnabled) return;
+        const rect = wrap.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) / (rect.width / 2);
+        const dy = (e.clientY - cy) / (rect.height / 2);
+        setRotY(dx * 8 - 6);
+        setRotX(-dy * 5 + 2);
+      }, { passive: true });
+
+      visual.addEventListener('mouseleave', () => {
+        if (!tiltEnabled) return;
+        // Ease back to resting tilt
+        setRotY(-6);
+        setRotX(2);
+      });
+    })();
+
+    // ── Counter animation ──────────────────────────────────────────
+    function animateCounter(el, target, suffix='') {
+      let start = 0;
+      const duration = 1200;
+      const step = timestamp => {
+        if (!step.startTime) step.startTime = timestamp;
+        const progress = Math.min((timestamp - step.startTime) / duration, 1);
+        const val = Math.floor(progress * target);
+        el.textContent = (suffix === '+' ? '+' : '') + val + (suffix === '★' ? '★' : suffix);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = (suffix === '+' ? '+' : '') + target + (suffix === '★' ? '★' : suffix);
+      };
+      requestAnimationFrame(step);
+    }
+
+    const statNums = document.querySelectorAll('.stat-num');
+    const statObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const text = el.textContent;
+          if (text.includes('★')) animateCounter(el, 5, '★');
+          else if (text.includes('+500')) animateCounter(el, 500, '+');
+          else if (text.includes('3+')) animateCounter(el, 3, '+');
+          statObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    statNums.forEach(el => statObs.observe(el));
+  </script>
+</body>
+</html>
